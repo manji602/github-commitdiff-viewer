@@ -18,6 +18,7 @@ var makeDiffButton = function() {
 var makeRadioButtons = function() {
     var commitAreas = $('.commit-links');
     commitAreas.each(function(){
+	$(this).css('width', '350px');
         var commitLink = $(this).find('.zeroclipboard-button:first');
         var commitHash = commitLink.attr('data-clipboard-text');
         var fromRadioButton = makeRadioButton('commitFrom', 'from', commitHash);
