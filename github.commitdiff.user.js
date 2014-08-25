@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name           Github UserScript
-// @namespace      Jun HASHIMOTO
+// @author         Jun HASHIMOTO
+// @description    Add diff link for github commit list page.
 // @include        https://github.com/*
-// @version        1.0.0
+// @version        1.0.1
 // @require http://code.jquery.com/jquery-2.1.1.min.js
 // ==/UserScript==
 
@@ -15,7 +16,7 @@ var makeDiffButton = function() {
 };
 
 var makeRadioButtons = function() {
-    var commitAreas = $('.commit-group-item');
+    var commitAreas = $('.commit-links');
     commitAreas.each(function(){
         var commitLink = $(this).find('.zeroclipboard-button:first');
         var commitHash = commitLink.attr('data-clipboard-text');
