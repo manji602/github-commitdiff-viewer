@@ -3,9 +3,13 @@ Github CommitDiff Viewer
 
 ## Description
 
-It's a user script which enables to access commit diff compare page easily.
+It's an user script which enables to access commit diff compare page easily.
 
 ## Requirement
+
+### FireFox
+
+[GreaseMonkey](https://addons.mozilla.org/ja/firefox/addon/greasemonkey/)
 
 ### Google Chrome
 
@@ -33,7 +37,7 @@ Install requirements show in above, then access [here](https://github.com/manji6
 
 ## License
 
-This plugin is released under the MIT License. See [LICENSE.txt](https://github.com/manji602/github_commit_viewer/raw/master/LICENSE.txt).
+This user script is released under the MIT License. See [LICENSE.txt](https://github.com/manji602/github_commit_viewer/raw/master/LICENSE.txt).
 
 ## Author
 
