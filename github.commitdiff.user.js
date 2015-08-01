@@ -10,7 +10,7 @@
 var buttonArea = $('.pagehead-actions:first');
 
 var makeDiffButton = function() {
-    var diffButton = $('<li><a href="#" class="button minibutton showDiffLink">Show Diff</a></li>');
+    var diffButton = $('<li><a href="#" class="btn btn-sm showDiffLink">Show Diff</a></li>');
     diffButton.bind("click", showDiffLink);
     buttonArea.append(diffButton);
 };
