@@ -1,18 +1,24 @@
 // ==UserScript==
 // @name           Github CommitDiff Viewer
-// @author         Jun HASHIMOTO
+// @author         Jun Hashimoto
 // @description    Add diff link for github commit list page.
 // @include        https://github.com/*
-// @version        1.0.2
-// @require http://code.jquery.com/jquery-2.1.1.min.js
+// @version        1.0.3
+// @require        http://code.jquery.com/jquery-2.1.1.min.js
 // ==/UserScript==
 
 var buttonArea = $('.pagehead-actions:first');
 
 var makeDiffButton = function() {
-    var diffButton = $('<li><a href="#" class="btn btn-sm showDiffLink">Show Diff</a></li>');
+    var diffButton = $('<li id="showDiffButton"><a href="#" class="btn btn-sm showDiffLink">Show Diff</a></li>');
     diffButton.bind("click", showDiffLink);
     buttonArea.append(diffButton);
+};
+
+var removeDiffButton = function() {
+    if ($('li#showDiffButton')) {
+	$('li#showDiffButton').remove();
+    }
 };
 
 var makeRadioButtons = function() {
@@ -52,25 +58,12 @@ var getCommitUrl = function(currentUrl) {
     return currentUrl.replace(/commits\/(\S+)/, 'compare/');
 };
 
-var hasDiffButton = function() {
-    var diffButton = document.getElementsByClassName('showDiffLink');
-    return ( diffButton.length === 0 ) ? false : true;
-};
-
-var onLocationChange = function(callback) {
-    var previous = '';
-    setInterval(function(e) {
-        if (previous != location.href) {
-            previous = location.href;
-            callback(location);
-        }
-    }, 1000);
-};
-
 // main function
-onLocationChange( function(location) {
-    if( location.pathname.match(/\/commits\//) && !hasDiffButton() ){
-        makeDiffButton();
-        makeRadioButtons();
+unsafeWindow.$(unsafeWindow.document).on('pjax:success', function(){
+    if( location.pathname.match(/\/commits\//) ) {
+	makeDiffButton();
+	makeRadioButtons();
+    } else {
+	removeDiffButton();
     }
 });
