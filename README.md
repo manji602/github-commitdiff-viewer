@@ -21,14 +21,13 @@ It's an user script which enables to access commit diff compare page easily.
 
 ## Usage
 
-1. Access your repository commits page( such as [here](https://github.com/manji602/github_commitdiff_viewer/commits/master) ).
+(1) Access your repository commits page( such as [here](https://github.com/manji602/github_commitdiff_viewer/commits/master) ).
 
-2. If you install this user.js, there are radio buttons on each commits.
+(2) If you install this user.js, there are radio buttons on each commits.
 
 ![sample image](https://cloud.githubusercontent.com/assets/531477/9022309/cd25ee4e-38ab-11e5-9784-0de294944bc0.png)
 
-
-3. Choose 'from' and 'to' radiobuttons, then click 'Commit Diff' button on upper right.
+(3) Choose 'from' and 'to' radiobuttons, then click 'Commit Diff' button on upper right.
 Then, you can access commit compare page.
 
 ## Install
