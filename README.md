@@ -28,6 +28,10 @@ Then, you can access commit compare page.
 
 Install requirements show in above, then access [here](https://github.com/manji602/github_commit_viewer/raw/master/github.commitdiff.user.js).
 
+## License
+
+This plugin is released under the MIT License. See [LICENSE.txt](https://github.com/manji602/github_commit_viewer/raw/master/LICENSE.txt).
+
 ## Author
 
 [Jun HASHIMOTO](https://github.com/manji602)
