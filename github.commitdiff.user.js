@@ -3,7 +3,7 @@
 // @author         Jun Hashimoto
 // @description    Add diff link for github commit list page.
 // @include        https://github.com/*
-// @version        1.0.3
+// @version        1.0.4
 // @require        http://code.jquery.com/jquery-2.1.1.min.js
 // ==/UserScript==
 
@@ -17,7 +17,7 @@ var makeDiffButton = function() {
 
 var removeDiffButton = function() {
     if ($('li#showDiffButton')) {
-	$('li#showDiffButton').remove();
+        $('li#showDiffButton').remove();
     }
 };
 
@@ -59,11 +59,19 @@ var getCommitUrl = function(currentUrl) {
 };
 
 // main function
-unsafeWindow.$(unsafeWindow.document).on('pjax:success', function(){
+var main = function() {
     if( location.pathname.match(/\/commits\//) ) {
-	makeDiffButton();
-	makeRadioButtons();
+        makeDiffButton();
+        makeRadioButtons();
     } else {
-	removeDiffButton();
+        removeDiffButton();
     }
+};
+
+unsafeWindow.$(unsafeWindow.document).on('pjax:success', function(){
+    main();
+});
+
+$(document).ready(function() {
+    main();
 });
