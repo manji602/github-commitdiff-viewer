@@ -7,7 +7,7 @@
 // @require        http://code.jquery.com/jquery-2.1.1.min.js
 // ==/UserScript==
 
-var buttonArea = $('.pagehead-actions:first');
+var buttonArea = $('.pagehead-actions');
 
 var makeDiffButton = function() {
     var diffButton = $('<li id="showDiffButton"><a href="#" class="btn btn-sm showDiffLink">Show Diff</a></li>');
