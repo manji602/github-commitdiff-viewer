@@ -12,7 +12,7 @@ var buttonArea = $('.pagehead-actions');
 var makeDiffButton = function() {
     var diffButton = $('<li id="showDiffButton"><a href="#" class="btn btn-sm showDiffLink">Show Diff</a></li>');
     diffButton.bind("click", showDiffLink);
-    buttonArea.append(diffButton);
+    $('.pagehead-actions').append(diffButton);
 };
 
 var removeDiffButton = function() {
@@ -68,7 +68,7 @@ var main = function() {
     }
 };
 
-unsafeWindow.$(unsafeWindow.document).on('pjax:success', function(){
+unsafeWindow.$(unsafeWindow.document).on('pjax:end', function(){
     main();
 });
 
