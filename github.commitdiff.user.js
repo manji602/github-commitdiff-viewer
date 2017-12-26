@@ -7,6 +7,19 @@
 // @require        https://code.jquery.com/jquery-3.2.1.min.js
 // ==/UserScript==
 
+(function() {
+  'use strict';
+
+  class CommitDiffUIManager {
+  }
+
+  // execute UserScript on browser, and export NGWordManager class on test
+  if (typeof window === 'object') {
+  } else {
+    module.exports = CommitDiffUIManager;
+  }
+})();
+
 var buttonArea = $('.pagehead-actions');
 
 var makeDiffButton = function() {
