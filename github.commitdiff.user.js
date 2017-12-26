@@ -4,7 +4,7 @@
 // @description    Add diff link for github commit list page.
 // @include        https://github.com/*
 // @version        1.0.4
-// @require        http://code.jquery.com/jquery-2.1.1.min.js
+// @require        https://code.jquery.com/jquery-3.2.1.min.js
 // ==/UserScript==
 
 var buttonArea = $('.pagehead-actions');
