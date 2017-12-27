@@ -1,0 +1,26 @@
+{
+  "name": "github-commitdiff-viewer",
+  "version": "1.1.0",
+  "description": "Add diff link for github commit list page.",
+  "main": "github.commitdiff.user.js",
+  "scripts": {
+    "test": "$(npm bin)/mocha './test/github.commitdiff.spec.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manji602/github-commitdiff-viewer.git"
+  },
+  "author": "Jun Hashimoto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manji602/github-commitdiff-viewer/issues"
+  },
+  "homepage": "https://github.com/manji602/github-commitdiff-viewer#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-dom": "^1.6.0",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.5.1",
+    "mocha": "^4.0.1"
+  }
+}
