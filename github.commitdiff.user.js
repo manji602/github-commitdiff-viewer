@@ -103,7 +103,7 @@
     }
   }
 
-  // execute UserScript on browser, and export NGWordManager class on test
+  // execute UserScript on browser, and export CommitDiffUIManager class on test
   if (typeof window === 'object') {
     const repositoryUrlRegExp = /https:\/\/github.com\/[^/]+\/[^/]+/;
 
