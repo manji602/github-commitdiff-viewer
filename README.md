@@ -34,7 +34,7 @@ Then, you can access commit compare page.
 
 ## Install
 
-Install requirements show in above, then access [here](https://github.com/manji602/github_commit_viewer/raw/master/github.commitdiff.user.js).
+Install requirements show in above, then access [here](https://github.com/manji602/github-commitdiff-viewer/raw/1.1.0/github.commitdiff.user.js).
 
 ## License
 
