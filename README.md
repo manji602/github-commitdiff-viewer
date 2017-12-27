@@ -1,6 +1,8 @@
 Github CommitDiff Viewer
 ====
 
+[![CircleCI](https://circleci.com/gh/manji602/github-commitdiff-viewer.svg?style=svg)](https://circleci.com/gh/manji602/github-commitdiff-viewer)
+
 ## Description
 
 It's an user script which enables to access commit diff compare page easily.
@@ -9,15 +11,15 @@ It's an user script which enables to access commit diff compare page easily.
 
 ### FireFox
 
-[GreaseMonkey](https://addons.mozilla.org/ja/firefox/addon/greasemonkey/)
+[TamperMonkey](https://tampermonkey.net/?browser=firefox)
 
 ### Google Chrome
 
-[Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=ja)
+[Tampermonkey](https://tampermonkey.net/?browser=chrome)
 
 ### Safari
 
-[NinjaKit](http://os0x.hatenablog.com/entry/20100612/1276330696)
+[Tampermonkey](https://tampermonkey.net/?browser=safari)
 
 ## Usage
 
@@ -25,7 +27,7 @@ It's an user script which enables to access commit diff compare page easily.
 
 (2) If you install this user.js, there are radio buttons on each commits.
 
-![sample image](https://cloud.githubusercontent.com/assets/531477/9022309/cd25ee4e-38ab-11e5-9784-0de294944bc0.png)
+![image](https://user-images.githubusercontent.com/531477/34368156-09bcf250-eaf5-11e7-93a0-ac807664615e.png)
 
 (3) Choose 'from' and 'to' radiobuttons, then click 'Commit Diff' button on upper right.
 Then, you can access commit compare page.
