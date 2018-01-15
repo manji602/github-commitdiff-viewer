@@ -51,6 +51,9 @@
       let that = this;
 
       $(CommitDiffUIManager.UI_CONSTANTS['selector']['commitArea']).each(function() {
+        // adjust width for verified label
+        $(this).css('width', '450px');
+
         let commitLink = $(this).find(CommitDiffUIManager.UI_CONSTANTS['selector']['commitLink']);
         let commitHash = commitLink.attr(CommitDiffUIManager.UI_CONSTANTS['attribute']['commitHash']);
 
