@@ -51,6 +51,9 @@
       let that = this;
 
       $(CommitDiffUIManager.UI_CONSTANTS['selector']['commitArea']).each(function() {
+        // adjust width for verified label
+        $(this).css('width', '450px');
+
         let commitLink = $(this).find(CommitDiffUIManager.UI_CONSTANTS['selector']['commitLink']);
         let commitHash = commitLink.attr(CommitDiffUIManager.UI_CONSTANTS['attribute']['commitHash']);
 
@@ -107,21 +110,17 @@
   if (typeof window === 'object') {
     const repositoryUrlRegExp = /https:\/\/github.com\/[^/]+\/[^/]+/;
 
-    let runUserScript = () => {
-      let match = location.href.match(repositoryUrlRegExp);
-      if (match) {
-        let repositoryUrl = match[0];
-        let commitDiffUIManager = new CommitDiffUIManager(repositoryUrl);
+    let match = location.href.match(repositoryUrlRegExp);
+    if (match) {
+      let repositoryUrl = match[0];
+      let commitDiffUIManager = new CommitDiffUIManager(repositoryUrl);
 
+      commitDiffUIManager.buildUI(location.href);
+
+      $(document).on('pjax:end', () => {
         commitDiffUIManager.buildUI(location.href);
-
-        $(document).on('pjax:end', () => {
-          commitDiffUIManager.buildUI(location.href);
-        });
-      }
-    };
-
-    runUserScript();
+      });
+    }
   } else {
     module.exports = CommitDiffUIManager;
   }
