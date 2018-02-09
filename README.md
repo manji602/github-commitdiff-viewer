@@ -1,7 +1,10 @@
 Github CommitDiff Viewer
 ====
 
+[![GitHub version](https://badge.fury.io/gh/manji602%2Fgithub-commitdiff-viewer.svg)](https://badge.fury.io/gh/manji602%2Fgithub-commitdiff-viewer)
 [![CircleCI](https://circleci.com/gh/manji602/github-commitdiff-viewer.svg?style=shield)](https://circleci.com/gh/manji602/github-commitdiff-viewer)
+[![Code Climate](https://codeclimate.com/github/manji602/github-commitdiff-viewer/badges/gpa.svg)](https://codeclimate.com/github/manji602/github-commitdiff-viewer/maintainability)
+![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 
 ## Description
 
