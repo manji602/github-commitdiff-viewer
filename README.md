@@ -1,7 +1,7 @@
 Github CommitDiff Viewer
 ====
 
-[![CircleCI](https://circleci.com/gh/manji602/github-commitdiff-viewer.svg?style=svg)](https://circleci.com/gh/manji602/github-commitdiff-viewer)
+[![CircleCI](https://circleci.com/gh/manji602/github-commitdiff-viewer.svg?style=shield)](https://circleci.com/gh/manji602/github-commitdiff-viewer)
 
 ## Description
 
