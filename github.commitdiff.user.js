@@ -20,7 +20,7 @@
       return {
         selector: {
           commitArea: '.commit-links-cell',
-          commitLink: 'div.BtnGroup .zeroclipboard-button:first',
+          commitLink: 'div.BtnGroup clipboard-copy.btn-outline:first',
           headerButtonArea: '.pagehead-actions',
           radioInput: 'input.commitHash',
           commitDiffButton: 'li#showDiffButton'
