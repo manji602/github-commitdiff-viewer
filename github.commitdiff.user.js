@@ -3,7 +3,7 @@
 // @author         Jun Hashimoto
 // @description    Add diff link for github commit list page.
 // @include        https://github.com/*
-// @version        1.1.1
+// @version        1.1.2
 // @require        https://code.jquery.com/jquery-3.2.1.min.js
 // ==/UserScript==
 
@@ -22,7 +22,7 @@
           commitArea: '.commit-links-cell',
           commitLink: 'div.BtnGroup clipboard-copy.btn-outline:first',
           headerButtonArea: '.pagehead-actions',
-          radioInput: 'input.commitHash',
+          radioInput: 'span.commitHash',
           commitDiffButton: 'li#showDiffButton'
         },
         attribute: {
