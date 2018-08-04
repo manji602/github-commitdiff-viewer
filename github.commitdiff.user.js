@@ -38,10 +38,10 @@
     // Build UI
     buildUI(currentUrl) {
       if (currentUrl.match(/\/commits\//)) {
-        if (!$(CommitDiffUIManager.UI_CONSTANTS['selector']['radioInput']).length) {
+        if (!document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['radioInput']).length) {
           this.createRadioInputs();
         }
-        if (!$(CommitDiffUIManager.UI_CONSTANTS['selector']['commitDiffButton']).length) {
+        if (!document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['commitDiffButton']).length) {
           this.createCommitDiffButton();
         }
       }
@@ -102,7 +102,7 @@
 
     getCommitHash(className) {
       let radioButtonSelector = 'input[name=' + className + ']:checked';
-      return $(radioButtonSelector).attr('value');
+      return document.querySelector(radioButtonSelector).getAttribute('value');
     }
   }
 
@@ -117,7 +117,7 @@
 
       commitDiffUIManager.buildUI(location.href);
 
-      $(document).on('pjax:end', () => {
+      document.addEventListener('pjax:end', () => {
         commitDiffUIManager.buildUI(location.href);
       });
     }
