@@ -26,7 +26,7 @@
           commitDiffButton: 'li#showDiffButton'
         },
         attribute: {
-          commitHash: 'data-clipboard-text'
+          commitHash: 'value'
         },
         dom: {
           radioInputPrefix: '<span class="commitHash BtnGroup-item btn btn-outline"><input type="radio" name=',
