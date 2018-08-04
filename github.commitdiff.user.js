@@ -22,7 +22,7 @@
           commitArea: '.commit-links-cell',
           commitLink: 'div.BtnGroup clipboard-copy.btn-outline',
           headerButtonArea: 'pagehead-actions',
-          radioInput: 'span.commitHash',
+          commitHash: 'commitHash',
           commitDiffButton: 'showDiffButton'
         },
         attribute: {
@@ -38,7 +38,7 @@
     // Build UI
     buildUI(currentUrl) {
       if (currentUrl.match(/\/commits\//)) {
-        if (!document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['radioInput']).length) {
+        if (!document.getElementsByClassName(CommitDiffUIManager.UI_CONSTANTS['selector']['commitHash']).length) {
           this.createRadioInputs();
         }
         if (!document.getElementById(CommitDiffUIManager.UI_CONSTANTS['selector']['commitDiffButton'])) {
