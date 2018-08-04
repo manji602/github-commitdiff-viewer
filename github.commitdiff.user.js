@@ -21,9 +21,9 @@
         selector: {
           commitArea: '.commit-links-cell',
           commitLink: 'div.BtnGroup clipboard-copy.btn-outline',
-          headerButtonArea: '.pagehead-actions',
+          headerButtonArea: 'pagehead-actions',
           radioInput: 'span.commitHash',
-          commitDiffButton: 'li#showDiffButton'
+          commitDiffButton: 'showDiffButton'
         },
         attribute: {
           commitHash: 'value'
@@ -41,7 +41,7 @@
         if (!document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['radioInput']).length) {
           this.createRadioInputs();
         }
-        if (!document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['commitDiffButton']).length) {
+        if (!document.getElementById(CommitDiffUIManager.UI_CONSTANTS['selector']['commitDiffButton'])) {
           this.createCommitDiffButton();
         }
       }
@@ -71,10 +71,11 @@
     }
 
     createCommitDiffButton() {
-      let diffButton = $(CommitDiffUIManager.UI_CONSTANTS['dom']['commitDiffButton']);
-      diffButton.bind('click', this.showCommitCompareUrl());
+      let diffButton       = CommitDiffUIManager.UI_CONSTANTS['dom']['commitDiffButton'];
+      let headerButtonArea = document.getElementsByClassName(CommitDiffUIManager.UI_CONSTANTS['selector']['headerButtonArea'])[0];
 
-      $(CommitDiffUIManager.UI_CONSTANTS['selector']['headerButtonArea']).append(diffButton);
+      headerButtonArea.insertAdjacentHTML("beforeend", diffButton);
+      document.getElementById(CommitDiffUIManager.UI_CONSTANTS['selector']['commitDiffButton']).addEventListener('click', this.showCommitCompareUrl());
     }
 
     // Show commit compare URL
