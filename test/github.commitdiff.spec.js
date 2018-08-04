@@ -1,9 +1,5 @@
-let chai    = require('chai');
-let path    = require('path');
-let jsdom   = require('jsdom');
-let should  = chai.should();
-
-chai.use(require('chai-dom'));
+let path  = require('path');
+let jsdom = require('jsdom');
 
 let CommitDiffUIManager = require(path.join(__dirname, '..', 'github.commitdiff.user.js'));
 const { JSDOM } = jsdom;
@@ -14,8 +10,15 @@ const dom = new JSDOM(`
 <span><input type="radio" name="commitTo" checked="checked" value="9876543210fedcba"> to</span>
 `);
 
-global.window = dom.window;
-global.$      = require('jquery');
+global.window   = dom.window;
+global.document = dom.window.document;
+global.$        = require('jquery');
+
+// setup chai
+let chai    = require('chai');
+let should  = chai.should();
+
+chai.use(require('chai-dom'));
 
 describe('CommitDiffUIManager', () => {
   let commitDiffUIManager;
