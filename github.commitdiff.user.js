@@ -4,7 +4,6 @@
 // @description    Add diff link for github commit list page.
 // @include        https://github.com/*
 // @version        1.1.2
-// @require        https://code.jquery.com/jquery-3.2.1.min.js
 // ==/UserScript==
 
 (function() {
