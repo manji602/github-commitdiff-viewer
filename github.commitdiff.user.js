@@ -20,7 +20,7 @@
       return {
         selector: {
           commitArea: '.commit-links-cell',
-          commitLink: 'div.BtnGroup clipboard-copy.btn-outline:first',
+          commitLink: 'div.BtnGroup clipboard-copy.btn-outline',
           headerButtonArea: '.pagehead-actions',
           radioInput: 'span.commitHash',
           commitDiffButton: 'li#showDiffButton'
@@ -29,7 +29,7 @@
           commitHash: 'value'
         },
         dom: {
-          radioInputPrefix: '<span class="commitHash BtnGroup-item btn btn-outline"><input type="radio" name=',
+          radioInputPrefix: '<span class="commitHash BtnGroup-item btn btn-outline"><input type="radio" name="',
           commitDiffButton: '<li id="showDiffButton"><a href="#" class="btn btn-sm showDiffLink">Show Diff</a></li>'
         }
       };
@@ -50,23 +50,24 @@
     createRadioInputs() {
       let that = this;
 
-      $(CommitDiffUIManager.UI_CONSTANTS['selector']['commitArea']).each(function() {
+      let commitAreas = document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['commitArea']);
+      Array.prototype.forEach.call(commitAreas, function(commitArea, i){
         // adjust width for verified label
-        $(this).css('width', '450px');
+        commitArea.style.width = '450px';
 
-        let commitLink = $(this).find(CommitDiffUIManager.UI_CONSTANTS['selector']['commitLink']);
-        let commitHash = commitLink.attr(CommitDiffUIManager.UI_CONSTANTS['attribute']['commitHash']);
+        let commitLink = commitArea.querySelector(CommitDiffUIManager.UI_CONSTANTS['selector']['commitLink']);
+        let commitHash = commitLink.getAttribute(CommitDiffUIManager.UI_CONSTANTS['attribute']['commitHash']);
 
         let fromRadioButton = that.createRadioInput('commitFrom', 'from', commitHash);
         let toRadioButton   = that.createRadioInput('commitTo', 'to', commitHash);
 
-        commitLink.before(fromRadioButton);
-        commitLink.before(toRadioButton);
-    });
-
+        commitLink.insertAdjacentHTML('beforebegin', fromRadioButton);
+        commitLink.insertAdjacentHTML('beforebegin', toRadioButton);
+      });
     }
+
     createRadioInput(propertyName, textName, commitHash) {
-      return $(CommitDiffUIManager.UI_CONSTANTS['dom']['radioInputPrefix'] + propertyName + ' value=' + commitHash + '> ' + textName + '</span>');
+      return CommitDiffUIManager.UI_CONSTANTS['dom']['radioInputPrefix'] + propertyName + '" value="' + commitHash + '"> ' + textName + '</span>';
     }
 
     createCommitDiffButton() {

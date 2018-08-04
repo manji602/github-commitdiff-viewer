@@ -35,9 +35,9 @@ describe('CommitDiffUIManager', () => {
       let commitHash   = 'abcdef0123456789';
 
       let subject  = commitDiffUIManager.createRadioInput(propertyName, textName, commitHash);
-      let expected = '<input type="radio" name="commitFrom" value="abcdef0123456789"> from';
+      let expected = '<span class="commitHash BtnGroup-item btn btn-outline"><input type="radio" name="commitFrom" value="abcdef0123456789"> from</span>';
 
-      subject[0].should.have.html(expected);
+      subject.should.equal(expected);
     });
   });
 
