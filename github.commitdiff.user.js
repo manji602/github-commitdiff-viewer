@@ -22,7 +22,7 @@
           commitArea: '.commit-links-cell',
           commitLink: 'div.BtnGroup clipboard-copy.btn-outline:first',
           headerButtonArea: '.pagehead-actions',
-          radioInput: 'input.commitHash',
+          radioInput: 'span.commitHash',
           commitDiffButton: 'li#showDiffButton'
         },
         attribute: {
