@@ -51,9 +51,6 @@
 
       let commitAreas = document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['commitArea']);
       Array.prototype.forEach.call(commitAreas, function(commitArea, i){
-        // adjust width for verified label
-        commitArea.style.width = '450px';
-
         let commitLink = commitArea.querySelector(CommitDiffUIManager.UI_CONSTANTS['selector']['commitLink']);
         let commitHash = commitLink.getAttribute(CommitDiffUIManager.UI_CONSTANTS['attribute']['commitHash']);
 
