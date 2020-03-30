@@ -3,7 +3,7 @@
 // @author         Jun Hashimoto
 // @description    Add diff link for github commit list page.
 // @include        https://github.com/*
-// @version        1.1.2
+// @version        1.1.3
 // ==/UserScript==
 
 (function() {
@@ -18,7 +18,7 @@
     static get UI_CONSTANTS() {
       return {
         selector: {
-          commitArea: '.commit-links-cell',
+          commitArea: '.commit-links-group',
           commitLink: 'div.BtnGroup clipboard-copy.btn-outline',
           headerButtonArea: 'pagehead-actions',
           commitHash: 'commitHash',
@@ -51,9 +51,6 @@
 
       let commitAreas = document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['commitArea']);
       Array.prototype.forEach.call(commitAreas, function(commitArea, i){
-        // adjust width for verified label
-        commitArea.style.width = '450px';
-
         let commitLink = commitArea.querySelector(CommitDiffUIManager.UI_CONSTANTS['selector']['commitLink']);
         let commitHash = commitLink.getAttribute(CommitDiffUIManager.UI_CONSTANTS['attribute']['commitHash']);
 
