@@ -18,7 +18,7 @@
     static get UI_CONSTANTS() {
       return {
         selector: {
-          commitArea: '.commit-links-cell',
+          commitArea: '.commit-links-group',
           commitLink: 'div.BtnGroup clipboard-copy.btn-outline',
           headerButtonArea: 'pagehead-actions',
           commitHash: 'commitHash',
