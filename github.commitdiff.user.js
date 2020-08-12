@@ -3,7 +3,7 @@
 // @author         Jun Hashimoto
 // @description    Add diff link for github commit list page.
 // @include        https://github.com/*
-// @version        1.1.3
+// @version        1.1.4
 // ==/UserScript==
 
 (function() {
@@ -18,7 +18,7 @@
     static get UI_CONSTANTS() {
       return {
         selector: {
-          commitArea: '.commit-links-group',
+          commitArea: '.js-commits-list-item',
           commitLink: 'div.BtnGroup clipboard-copy.btn-outline',
           headerButtonArea: 'pagehead-actions',
           commitHash: 'commitHash',
