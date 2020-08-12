@@ -3,7 +3,7 @@
 // @author         Jun Hashimoto
 // @description    Add diff link for github commit list page.
 // @include        https://github.com/*
-// @version        1.1.3
+// @version        1.1.4
 // ==/UserScript==
 
 (function() {
