@@ -19,13 +19,10 @@
       return {
         selector: {
           commitArea: '.js-commits-list-item',
-          commitLink: 'div.BtnGroup clipboard-copy.btn-outline',
+          commitLink: 'div.BtnGroup a.btn-outline',
           headerButtonArea: 'pagehead-actions',
           commitHash: 'commitHash',
           commitDiffButton: 'showDiffButton'
-        },
-        attribute: {
-          commitHash: 'value'
         },
         dom: {
           radioInputPrefix: '<span class="commitHash BtnGroup-item btn btn-outline"><input type="radio" name="',
@@ -52,7 +49,7 @@
       let commitAreas = document.querySelectorAll(CommitDiffUIManager.UI_CONSTANTS['selector']['commitArea']);
       Array.prototype.forEach.call(commitAreas, function(commitArea, i){
         let commitLink = commitArea.querySelector(CommitDiffUIManager.UI_CONSTANTS['selector']['commitLink']);
-        let commitHash = commitLink.getAttribute(CommitDiffUIManager.UI_CONSTANTS['attribute']['commitHash']);
+        let commitHash = commitLink.textContent.match(/[0-9a-f]+/)[0];
 
         let fromRadioButton = that.createRadioInput('commitFrom', 'from', commitHash);
         let toRadioButton   = that.createRadioInput('commitTo', 'to', commitHash);
