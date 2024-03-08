@@ -18,15 +18,15 @@
     static get UI_CONSTANTS() {
       return {
         selector: {
-          commitArea: '.js-commits-list-item',
-          commitLink: 'div.BtnGroup a.btn-outline',
-          headerButtonArea: 'pagehead-actions',
+          commitArea: 'li.listviewitem',
+          commitLink: 'div.d-flex span[aria-label="View commit details"]',
+          headerButtonArea: 'AppHeader-actions',
           commitHash: 'commitHash',
           commitDiffButton: 'showDiffButton'
         },
         dom: {
-          radioInputPrefix: '<span class="commitHash BtnGroup-item btn btn-outline"><input type="radio" name="',
-          commitDiffButton: '<li id="showDiffButton"><a href="#" class="btn btn-sm showDiffLink">Show Diff</a></li>'
+          radioInputPrefix: '<span class="Button--secondary Button--small Button text-mono f6"><input type="radio" name="',
+          commitDiffButton: '<div data-view-component="true" class="Button-withTooltip" id="showDiffButton"><a href="javascript:void(0);" class="Button Button--secondary Button--medium AppHeader-button color-fg-muted">Show Diff</a></div>'
         }
       };
     }
