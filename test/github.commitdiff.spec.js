@@ -13,12 +13,6 @@ const dom = new JSDOM(`
 global.window   = dom.window;
 global.document = dom.window.document;
 
-// setup chai
-let chai    = require('chai');
-let should  = chai.should();
-
-chai.use(require('chai-dom'));
-
 describe('CommitDiffUIManager', () => {
   let commitDiffUIManager;
   let repositoryUrl = 'https://github.com/ghost/sample';

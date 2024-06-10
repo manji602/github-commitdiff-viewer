@@ -4,7 +4,7 @@
   "description": "Add diff link for github commit list page.",
   "main": "github.commitdiff.user.js",
   "scripts": {
-    "test": "$(npm bin)/mocha './test/github.commitdiff.spec.js'"
+    "test": "mocha ./test/github.commitdiff.spec.js --require chai/register-should.js"
   },
   "repository": {
     "type": "git",
