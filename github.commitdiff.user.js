@@ -18,7 +18,7 @@
     static get UI_CONSTANTS() {
       return {
         selector: {
-          commitArea: 'li.listviewitem',
+          commitArea: 'li.list-view-item',
           commitLink: 'div.d-flex span[aria-label="View commit details"]',
           headerButtonArea: 'AppHeader-actions',
           commitHash: 'commitHash',
